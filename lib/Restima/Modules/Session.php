@@ -1,7 +1,14 @@
 <?php
 
-namespace Restima\Modules;
+/**
+ * Restima - A RESTful PHP Micro-framework (http://restima.evrima.net/)
+ *
+ * @copyright Copyright (c) 2013 Yasin inat <risyasin@gmail.com>
+ * @license   MIT
+ */
 
+
+namespace Restima\Modules;
 
 class Session {
 

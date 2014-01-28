@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Restima - A RESTful PHP Micro-framework (http://restima.evrima.net/)
+ *
+ * @copyright Copyright (c) 2013 Yasin inat <risyasin@gmail.com>
+ * @license   MIT
+ */
+
 namespace DataSources;
 
 /**
@@ -11,9 +18,9 @@ namespace DataSources;
 
 abstract class AbstractAdapter
 {
-    /* @var $request  \Restful\Request */
+    /* @var $request  \Restima\Request */
     public $request;
-    /* @var $response  \Restful\Response */
+    /* @var $response  \Restima\Response */
     public $response;
 
     /**

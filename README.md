@@ -10,8 +10,8 @@ Supports:
 * Micro-framework style route definitions such as $app->get('/', function($request,$response){ });
 * Supports HTTP method override via short route definitions, useful while implementing ACL.
 * Supports MongoDB as an data source. Any collection can be assigned to a spcified route via App/ClassName.
-* Supports Mysql as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#####1)
-* Supports Sqlite as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#####1)
+* Supports Mysql as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#1)
+* Supports Sqlite as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#1)
 * Memcached support via route queries, Default 3 seconds to evade high load.
 * Automagical content negotiation via Headers. Looks for http accepts header.
 * Output support application/json (default), text/csv and application/xml.
@@ -20,17 +20,13 @@ Supports:
 * Supports automatic form enctype detection to capture posted values. raw POST body decodes only JSON format.
 * supports multiple configuration by Environment name or developer name. useful to apply different config sets while working within a team!
 
-
-Notes:
-#####1
-MySQL and Sqlite support removed due to unstable output & rookie implementation.
-
+Notes: 1 - MySQL and Sqlite support removed due to unstable output & rookie implementation. (Sorry, it will be added soon.)
 
 #### How to Install #####
 
 * Clone git repo to your working directory.
 * Apache Httpd: you can use .htaccess
-* Nginx / php-fpm: Use the snippet here.
+* Nginx / php-fpm: Use the [snippet here](https://gist.github.com/risyasin/8677470).
 
 
 #### Configuration #####

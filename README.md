@@ -1,7 +1,9 @@
-### Summary ###
-Restima - A RESTful PHP Micro-framework (http://restima.evrima.net/)
+## Restima - A RESTful PHP Micro-framework ##
+[http://restima.evrima.net/](http://restima.evrima.net/)
 
-Allows you to create a reliable RESTful webservice (really!) fast & easy, Please do not hesitate to contact for any bug report & merge request.
+#### Summary ####
+Allows you to create a reliable RESTful webservice (really!) fast & easy,
+Please do not hesitate to contact for any bug report & merge request.
 
 Supports:
 
@@ -16,6 +18,7 @@ Supports:
 * Json output support a standart output type for all handlers.
 * CSV output supports standart output type as HTTP headers, such as X-Api-Response, X-Api-Message, X-Api-Keys.
 * Supports automatic form enctype detection to capture posted values. raw POST body decodes only JSON format.
+* supports multiple configuration by Environment name or developer name. useful to apply different config sets while working within a team!
 
 
 Notes: #1,#2 - MySQL & Sqlite support removed due to unstable output & rookie implementation. (Sorry will be added soon)

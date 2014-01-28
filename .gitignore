@@ -1,4 +1,5 @@
 .DS_Store
+config/yasin.php
 .idea/
 .idea/.name
 .idea/encodings.xml

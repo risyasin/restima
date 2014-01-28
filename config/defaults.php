@@ -3,7 +3,7 @@
 
 return array(
     'mongo' => (object) array(
-                'uri' => 'mongodb://user:pass@host:27017',
+                'uri' => 'mongodb://user:pass@127.0.0.1:27017',
                 'database' => 'demo',
                 'authdb' => 'admin'
             ),

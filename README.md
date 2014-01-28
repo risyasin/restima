@@ -8,7 +8,7 @@ Please do not hesitate to contact for any bug report & merge request.
 Supports:
 * Micro-framework style route definitions such as $app->get('/', function($request,$response){ });
 * Supports HTTP method override via short route definitions, useful while implementing ACL.
-* Supports MongoDB as an data source. Any collection can be assigned to a spcified route via App/ClassName.
+* Supports MongoDB as a data source. Any collection can be assigned to a spcified route via App/ClassName.
 * Supports Mysql as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#1)
 * Supports Sqlite as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#1)
 * Memcached support via route queries, Default 3 seconds to evade high load.
@@ -38,9 +38,10 @@ Precedence order follows as below.
 
 
 #### Usage #####
-This framework aimed to be quick design of a [RESTful webservice](https://blog.apigee.com/detail/restful_api_design) with MongoDB via built-in Adapter. MongoDB Adapter you can requires only collection name. (Database name must be in configuration)
+This framework aimed to be quick design application for a [RESTful webservice](https://blog.apigee.com/detail/restful_api_design) for Service/Resource oriented architectures with MongoDB via built-in adapters. MongoDB Adapter requires only collection name. (Database name must be in configuration)
+
 A short example for /books route to connect a collection named my_book_list below.
-First create a new file under the controllers directory named app/
+First create a new file under the controllers directory named app/books.php
 Create your class proper to filename, use the skeleton below.
 
 ``` php

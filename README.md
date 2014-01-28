@@ -23,7 +23,44 @@ Supports:
 
 Notes: #1,#2 - MySQL & Sqlite support removed due to unstable output & rookie implementation. (Sorry will be added soon)
 
-#### TODOS ####
+#### How to Install #####
+
+* Clone git repo to your working directory.
+* Apache Httpd: you can use .htaccess
+* Nginx / php-fpm: Use the snippet here.
+
+
+#### Configuration #####
+Framework reads the file config/default.php by default.
+Also looks for extra configuration files via SAPI / FastCGI environment variables.
+Precedence order follows as below.
+Default => default.php -Required-
+APPLICATION_ENV => 'your_environment' supposed to be used as Env. switch. Filename without extension (php)
+APPLICATION_DEV => 'your_name' supposed to be used as Developer switch. Filename without extension (php)
+
+
+
+#### Usage #####
+
+This framework aimed to be quick design of a [RESTful webservice](https://blog.apigee.com/detail/restful_api_design) with MongoDB via built-in Adapter. MongoDB Adapter you can requires only collection name. (Database name must be in configuration)
+A short example for /books route to connect a collection named my_book_list below.
+First create a new file under the controllers directory named app/
+Create your class proper to filename, use the skeleton below.
+``` php
+    class books extends \DataSources\MongoAdapter
+    {
+        public function __construct($req, $resp, $config)
+        {
+            $this->init($req, $resp, $config);
+            $this->set_collection('my_book_list');
+        }
+    }
+```
+
+Optionally you can set a public var in class body named $cache_expire to initialize memcached.
+
+
+#### Todo List ####
 * Authentication support via Basic and Digest Access & OAuth2
 * Connect host limitation via configuration. must check real & forwarded ip addresses of client to protect against hostname forgery
 * text/html output type as an automatic scaffolding & make available basic CRUD operations via route.

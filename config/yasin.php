@@ -3,8 +3,8 @@
 
 return array(
     'mongo' => (object) array(
-                'uri' => 'mongodb://yasin:3262062@127.0.0.1:27017',
-                'database' => 'production',
+                'uri' => 'mongodb://user:pass@host:27017',
+                'database' => 'demo',
                 'authdb' => 'admin'
             ),
     'memcached' => (object) array(

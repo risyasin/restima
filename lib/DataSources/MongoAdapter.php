@@ -1,5 +1,7 @@
 <?php
 
+
+
 namespace DataSources;
 
 /**
@@ -41,6 +43,7 @@ class MongoAdapter extends AbstractAdapter {
      * @param \Restima\Request $req
      * @param \Restima\Response $res
      * @param $config
+     * @return null
      */
 
     public function init(\Restima\Request $req, \Restima\Response $res, $config)

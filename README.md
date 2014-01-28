@@ -10,8 +10,8 @@ Supports:
 * Micro-framework style route definitions such as $app->get('/', function($request,$response){ });
 * Supports HTTP method override via short route definitions, useful while implementing ACL.
 * Supports MongoDB as an data source. Any collection can be assigned to a spcified route via App/ClassName.
-* Supports Mysql as an data source. Any collection can be assigned to a spcified route via App/ClassName  [BUGGY] (#1)
-* Supports Sqlite as an data source. Any collection can be assigned to a spcified route via App/ClassName  [BUGGY] (#2)
+* Supports Mysql as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#####1)
+* Supports Sqlite as an data source. Any collection can be assigned to a spcified route via Class [BUGGY](#####1)
 * Memcached support via route queries, Default 3 seconds to evade high load.
 * Automagical content negotiation via Headers. Looks for http accepts header.
 * Output support application/json (default), text/csv and application/xml.
@@ -21,7 +21,10 @@ Supports:
 * supports multiple configuration by Environment name or developer name. useful to apply different config sets while working within a team!
 
 
-Notes: #1,#2 - MySQL & Sqlite support removed due to unstable output & rookie implementation. (Sorry will be added soon)
+Notes:
+#####1
+MySQL and Sqlite support removed due to unstable output & rookie implementation.
+
 
 #### How to Install #####
 
@@ -34,9 +37,9 @@ Notes: #1,#2 - MySQL & Sqlite support removed due to unstable output & rookie im
 Framework reads the file config/default.php by default.
 Also looks for extra configuration files via SAPI / FastCGI environment variables.
 Precedence order follows as below.
-Default => default.php -Required-
-APPLICATION_ENV => 'your_environment' supposed to be used as Env. switch. Filename without extension (php)
-APPLICATION_DEV => 'your_name' supposed to be used as Developer switch. Filename without extension (php)
+* Default => default.php -Required-
+* APPLICATION_ENV => 'your_environment' supposed to be used as Env. switch. Filename without extension (php)
+* APPLICATION_DEV => 'your_name' supposed to be used as Developer switch. Filename without extension (php)
 
 
 
@@ -46,6 +49,7 @@ This framework aimed to be quick design of a [RESTful webservice](https://blog.a
 A short example for /books route to connect a collection named my_book_list below.
 First create a new file under the controllers directory named app/
 Create your class proper to filename, use the skeleton below.
+
 ``` php
     class books extends \DataSources\MongoAdapter
     {
